@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx/8"
+            fx:controller="co.edu.uniquindio.empresatransporte.proyecto_final_daniel_morales_sebastian_vargas.UsuarioController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <Label text="Nombre:" layoutX="20" layoutY="20"/>
+        <TextField fx:id="txtNombre" layoutX="100" layoutY="20"/>
+
+        <Label text="Identificación:" layoutX="20" layoutY="60"/>
+        <TextField fx:id="txtIdentificacion" layoutX="100" layoutY="60"/>
+
+        <Label text="Teléfono:" layoutX="350" layoutY="20"/>
+        <TextField fx:id="txtTelefono" layoutX="420" layoutY="20"/>
+
+        <Label text="Correo:" layoutX="350" layoutY="60"/>
+        <TextField fx:id="txtCorreo" layoutX="420" layoutY="60"/>
+
+        <Button fx:id="btnAgregar" text="Agregar" layoutX="100" layoutY="100" onAction="#agregarUsuario"/>
+        <Button fx:id="btnActualizar" text="Actualizar" layoutX="200" layoutY="100" onAction="#actualizarUsuario"/>
+        <Button fx:id="btnEliminar" text="Eliminar" layoutX="320" layoutY="100" onAction="#eliminarUsuario"/>
+
+        <TableView fx:id="tablaUsuarios" layoutX="20" layoutY="150" prefWidth="550" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="130"/>
+                <TableColumn fx:id="colIdentificacion" text="Identificación" prefWidth="130"/>
+                <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="130"/>
+                <TableColumn fx:id="colCorreo" text="Correo" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
